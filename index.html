@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    
+    <script>
+        var cnt = 0;
+
+        function win() {
+            var b1 = document.getElementById('disp1').value
+            var b2 = document.getElementById('disp2').value
+            var b3 = document.getElementById('disp3').value
+            var b4 = document.getElementById('disp4').value
+            var b5 = document.getElementById('disp5').value
+            var b6 = document.getElementById('disp6').value
+            var b7 = document.getElementById('disp7').value
+            var b8 = document.getElementById('disp8').value
+            var b9 = document.getElementById('disp9').value
+
+            if((b1=='X' && b2=='X' && b3=='X') || (b1=='O' && b2=='O' && b3=='O'))
+            {
+                document.getElementById('disp1').style.color = 'red'
+                document.getElementById('disp2').style.color = 'red'
+                document.getElementById('disp3').style.color = 'red'
+
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp5').disabled = true
+                document.getElementById('disp6').disabled = true
+                document.getElementById('disp7').disabled = true
+                document.getElementById('disp8').disabled = true
+                document.getElementById('disp9').disabled = true
+                
+                if(b1=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b4=='X' && b5=='X' && b6=='X') || (b4=='O' && b5=='O' && b6=='O'))
+            {
+                document.getElementById('disp4').style.color = 'red'
+                document.getElementById('disp5').style.color = 'red'
+                document.getElementById('disp6').style.color = 'red'
+
+                document.getElementById('disp1').disabled = true
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp3').disabled = true
+                document.getElementById('disp7').disabled = true
+                document.getElementById('disp8').disabled = true
+                document.getElementById('disp9').disabled = true
+
+                if(b4=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b7=='X' && b8=='X' && b9=='X') || (b7=='O' && b8=='O' && b9=='O'))
+            {
+                document.getElementById('disp7').style.color = 'red'
+                document.getElementById('disp8').style.color = 'red'
+                document.getElementById('disp9').style.color = 'red'
+                
+                document.getElementById('disp1').disabled = true
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp3').disabled = true
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp5').disabled = true
+                document.getElementById('disp6').disabled = true
+
+                if(b7=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b1=='X' && b4=='X' && b7=='X') || (b1=='O' && b4=='O' && b7=='O'))
+            {
+                document.getElementById('disp1').style.color = 'red'
+                document.getElementById('disp4').style.color = 'red'
+                document.getElementById('disp7').style.color = 'red'
+
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp3').disabled = true
+                document.getElementById('disp5').disabled = true
+                document.getElementById('disp6').disabled = true
+                document.getElementById('disp8').disabled = true
+                document.getElementById('disp9').disabled = true
+
+                if(b1=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b2=='X' && b5=='X' && b8=='X') || (b2=='O' && b5=='O' && b8=='O'))
+            {
+                document.getElementById('disp2').style.color = 'red'
+                document.getElementById('disp5').style.color = 'red'
+                document.getElementById('disp8').style.color = 'red'
+
+                document.getElementById('disp1').disabled = true
+                document.getElementById('disp3').disabled = true
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp6').disabled = true
+                document.getElementById('disp7').disabled = true
+                document.getElementById('disp9').disabled = true
+
+                if(b2=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b3=='X' && b6=='X' && b9=='X') || (b3=='O' && b6=='O' && b9=='O'))
+            {
+                document.getElementById('disp3').style.color = 'red'
+                document.getElementById('disp6').style.color = 'red'
+                document.getElementById('disp9').style.color = 'red'
+
+                document.getElementById('disp1').disabled = true
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp5').disabled = true
+                document.getElementById('disp7').disabled = true
+                document.getElementById('disp8').disabled = true
+
+                if(b3=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b1=='X' && b5=='X' && b9=='X') || (b1=='O' && b5=='O' && b9=='O'))
+            {
+                document.getElementById('disp1').style.color = 'red'
+                document.getElementById('disp5').style.color = 'red'
+                document.getElementById('disp9').style.color = 'red'
+                
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp3').disabled = true
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp6').disabled = true
+                document.getElementById('disp7').disabled = true
+                document.getElementById('disp8').disabled = true
+
+                if(b1=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+            else if ((b3=='X' && b5=='X' && b7=='X') || (b3=='O' && b5=='O' && b7=='O'))
+            {
+                document.getElementById('disp3').style.color = 'red'
+                document.getElementById('disp5').style.color = 'red'
+                document.getElementById('disp7').style.color = 'red'
+
+                document.getElementById('disp1').disabled = true
+                document.getElementById('disp2').disabled = true
+                document.getElementById('disp4').disabled = true
+                document.getElementById('disp6').disabled = true
+                document.getElementById('disp8').disabled = true
+                document.getElementById('disp9').disabled = true
+
+                if(b3=='X')
+                {
+                    winx();
+                }else
+                {
+                    wino();
+                }
+            }
+        }
+
+        function winx() {
+            document.getElementById('plyX').style.display = block;
+        }
+
+        function wino() {
+            document.getElementById('plyO').style.display = block;
+        }
+        
+        function box1() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp1').value = 'O'
+                cnt += 1
+                document.getElementById('disp1').disabled = true;
+            }else
+            {
+                document.getElementById("disp1").value = 'X'
+                cnt += 1
+                document.getElementById('disp1').disabled = true;
+            }
+            win();
+        }
+
+        function box2() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp2').value = 'O'
+                cnt += 1
+                document.getElementById('disp2').disabled = true;
+            }else
+            {
+                document.getElementById('disp2').value = 'X'
+                cnt += 1
+                document.getElementById('disp2').disabled = true;
+            }
+            win();
+        }
+
+        function box3() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp3').value = 'O'
+                cnt += 1
+                document.getElementById('disp3').disabled = true;
+            }else
+            {
+                document.getElementById('disp3').value = 'X'
+                cnt += 1
+                document.getElementById('disp3').disabled = true;
+            }
+            win();
+        }
+
+        function box4() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp4').value = 'O'
+                cnt += 1
+                document.getElementById('disp4').disabled = true;
+            }else
+            {
+                document.getElementById('disp4').value = 'X'
+                cnt += 1
+                document.getElementById('disp4').disabled = true;
+            }
+            win();    
+        }
+       
+        function box5() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp5').value = 'O'
+                cnt += 1
+                document.getElementById('disp5').disabled = true;
+            }else
+            {
+                document.getElementById('disp5').value = 'X'
+                cnt +=1
+                document.getElementById('disp5').disabled = true;
+            }
+            win();    
+        }
+
+        function box6() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp6').value = 'O'
+                cnt += 1
+                document.getElementById('disp6').disabled = true;
+            }else
+            {
+                document.getElementById('disp6').value = 'X'
+                cnt += 1
+                document.getElementById('disp6').disabled = true;
+            }
+            win();    
+        }
+
+        function box7() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp7').value = 'O'
+                cnt += 1
+                document.getElementById('disp7').disabled = true;
+            }else
+            {
+                document.getElementById('disp7').value = 'X'
+                cnt += 1
+                document.getElementById('disp7').disabled = true;
+            }
+            win();    
+        }
+
+        function box8() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp8').value = 'O'
+                cnt += 1
+                document.getElementById('disp8').disabled = true;
+            }else
+            {
+                document.getElementById('disp8').value = 'X'
+                cnt += 1
+                document.getElementById('disp8').disabled = true;
+            }
+            win();    
+        }
+
+        function box9() {
+            if(cnt%2==0)
+            {
+                document.getElementById('disp9').value = 'O'
+                cnt += 1
+                document.getElementById('disp9').disabled = true;
+            }else
+            {
+                document.getElementById('disp9').value = 'X'
+                cnt += 1
+                document.getElementById('disp9').disabled = true;
+            }
+            win();    
+        }
+
+        function reset() {
+            location.reload();
+        }
+        
+    </script>
+
+    <style>
+        
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        section{
+            height: 300px;
+            width: 500px;
+            margin: 10px auto;
+        }
+        .d-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+        }
+        input{
+            border: none;
+            height: 60px;
+            width: 100px;
+            cursor: pointer;
+            background-color: #ffffff;
+            color: dodgerblue;
+            text-align: center;
+            font-size: 32px;
+        }
+        .border-right{
+            border-right: 2px solid green;
+        }
+        .border-left {
+            border-left: 2px solid green;
+        }
+        .border-top{
+            border-top: 2px solid green;
+        }
+        .border-bottom{
+            border-bottom: 2px solid green;
+        }
+        div{
+            width: 300px;
+            height: 150px;
+            margin: 55px auto;
+        }
+        .plyx{
+            text-align: center;
+            color: red;
+            font-size: 30px;
+            padding: 10px 0px;
+            display: none;
+        }
+        .plyo{
+            text-align: center;
+            color: red;
+            font-size: 30px;
+            padding: 10px 0px;
+            display: none;
+        }
+        .withdraw{
+
+            text-align: center;
+            color: red;
+            font-size: 30px;
+            padding: 10px 0px;
+            display: none;   
+        }
+        .reset{
+            height: 30px;
+            width: 100px;
+            border-radius: 10px;
+            border: transparent;
+            background-color: aqua;
+            font-weight: 600;
+            margin: 5% 41%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="main d-grid">
+            <input id="disp1" class="box border-bottom border-right" onclick="box1()" readonly></input>
+            <input id="disp2" class="box border-bottom" onclick="box2()" readonly></input>
+            <input id="disp3" class="box border-bottom border-left" onclick="box3()" readonly></input>
+            <input id="disp4" class="box border-bottom border-right" onclick="box4()" readonly></input>
+            <input id="disp5" class="box border-bottom" onclick="box5()" readonly></input>
+            <input id="disp6" class="box border-bottom border-left" onclick="box6()" readonly></input>
+            <input id="disp7" class="box border-right" onclick="box7()" readonly></input>
+            <input id="disp8" class="box" onclick="box8()" readonly></input>
+            <input id="disp9" class="box border-left" onclick="box9()" readonly></input>
+        </div>
+        <h1 class="plyx" id="plyX">Player 'X' is Win</h1>
+        <h1 class="plyo" id="plyO">Player 'O' is Win</h1>
+        <button class="reset" id="reset" onclick="reset()">Restart</button>
+    </section>
+</body>
+</html>
